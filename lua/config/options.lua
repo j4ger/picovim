@@ -22,6 +22,7 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.clipboard = "unnamedplus"
 
 -- Diagnostic config
 vim.diagnostic.config {
