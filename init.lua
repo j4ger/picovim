@@ -869,5 +869,14 @@ do
   require 'custom.plugins'
 end
 
+-- ADDITIONAL KEYBINDS
+vim.keymap.set({'n', 'i'}, '<C-s>', ':update<CR>', { desc = 'Save' })
+vim.keymap.set('n', '<leader>w', ':update<CR>', { desc = 'Save' })
+
+-- Neovide settings
+if vim.g.neovide then
+  vim.o.guifont = 'Maple Mono NF CN Light:h14'
+end
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
