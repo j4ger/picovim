@@ -1,4 +1,7 @@
-vim.pack.add { gh 'folke/flash.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = { gh 'folke/flash.nvim' }
+
+vim.pack.add(specs)
 
 require('flash').setup {}
 

@@ -1,11 +1,19 @@
-vim.pack.add { gh 'NMAC427/guess-indent.nvim' }
-require('guess-indent').setup {}
-
+---@type (string|vim.pack.Spec)[]
+local specs = {
+  gh 'NMAC427/guess-indent.nvim',
+  gh 'folke/which-key.nvim',
+  gh 'scottmckendry/cyberdream.nvim',
+  gh 'folke/todo-comments.nvim',
+  gh 'nvim-mini/mini.nvim',
+}
 if vim.g.have_nerd_font then
-  vim.pack.add { gh 'nvim-tree/nvim-web-devicons' }
+  table.insert(specs, gh 'nvim-tree/nvim-web-devicons')
 end
 
-vim.pack.add { gh 'folke/which-key.nvim' }
+vim.pack.add(specs)
+
+require('guess-indent').setup {}
+
 require('which-key').setup {
   delay = 0,
   icons = { mappings = vim.g.have_nerd_font },
@@ -17,14 +25,10 @@ require('which-key').setup {
   },
 }
 
-vim.pack.add { gh 'scottmckendry/cyberdream.nvim' }
 require('cyberdream').setup {}
 vim.cmd.colorscheme 'cyberdream'
 
-vim.pack.add { gh 'folke/todo-comments.nvim' }
 require('todo-comments').setup { signs = false }
-
-vim.pack.add { gh 'nvim-mini/mini.nvim' }
 
 require('mini.ai').setup {
   mappings = {

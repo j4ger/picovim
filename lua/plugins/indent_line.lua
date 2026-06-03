@@ -1,2 +1,6 @@
-vim.pack.add { gh 'lukas-reineke/indent-blankline.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = { gh 'lukas-reineke/indent-blankline.nvim' }
+
+vim.pack.add(specs)
+
 require('ibl').setup {}

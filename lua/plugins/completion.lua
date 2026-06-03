@@ -1,10 +1,15 @@
-vim.pack.add { { src = gh 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' } }
+---@type (string|vim.pack.Spec)[]
+local specs = {
+  { src = gh 'L3MON4D3/LuaSnip', version = vim.version.range '2.*' },
+  -- vim.pack.add { gh 'rafamadriz/friendly-snippets' }
+  -- require('luasnip.loaders.from_vscode').lazy_load()
+  { src = gh 'saghen/blink.cmp', version = vim.version.range '1.*' },
+}
+
+vim.pack.add(specs)
+
 require('luasnip').setup {}
 
--- vim.pack.add { gh 'rafamadriz/friendly-snippets' }
--- require('luasnip.loaders.from_vscode').lazy_load()
-
-vim.pack.add { { src = gh 'saghen/blink.cmp', version = vim.version.range '1.*' } }
 require('blink.cmp').setup {
   keymap = { preset = 'default' },
   appearance = { nerd_font_variant = 'mono' },

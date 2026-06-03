@@ -1,4 +1,8 @@
-vim.pack.add { gh 'stevearc/conform.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = { gh 'stevearc/conform.nvim' }
+
+vim.pack.add(specs)
+
 require('conform').setup {
   notify_on_error = false,
   format_on_save = function(bufnr)

@@ -1,4 +1,7 @@
-vim.pack.add { gh 'lewis6991/gitsigns.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = { gh 'lewis6991/gitsigns.nvim' }
+
+vim.pack.add(specs)
 
 require('gitsigns').setup {
   signs = {

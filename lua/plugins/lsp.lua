@@ -1,4 +1,14 @@
-vim.pack.add { gh 'j-hui/fidget.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = {
+  gh 'j-hui/fidget.nvim',
+  gh 'neovim/nvim-lspconfig',
+  gh 'mason-org/mason.nvim',
+  gh 'mason-org/mason-lspconfig.nvim',
+  gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
+}
+
+vim.pack.add(specs)
+
 require('fidget').setup {}
 
 -- LSP attach autocmd
@@ -80,13 +90,6 @@ local servers = {
       Lua = { format = { enable = false } },
     },
   },
-}
-
-vim.pack.add {
-  gh 'neovim/nvim-lspconfig',
-  gh 'mason-org/mason.nvim',
-  gh 'mason-org/mason-lspconfig.nvim',
-  gh 'WhoIsSethDaniel/mason-tool-installer.nvim',
 }
 
 require('mason').setup {}

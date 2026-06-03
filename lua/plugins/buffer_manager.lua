@@ -1,4 +1,7 @@
-vim.pack.add { gh 'nvim-lua/plenary.nvim', gh 'j-morano/buffer_manager.nvim' }
+---@type (string|vim.pack.Spec)[]
+local specs = { gh 'nvim-lua/plenary.nvim', gh 'j-morano/buffer_manager.nvim' }
+
+vim.pack.add(specs)
 
 require('buffer_manager').setup {}
 
