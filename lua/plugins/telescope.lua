@@ -26,6 +26,14 @@ vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Live Grep' })
 vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search diag' })
 vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Search buffers' })
 
+-- Git operations
+vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Git commits' })
+vim.keymap.set('n', '<leader>gC', builtin.git_bcommits, { desc = 'Git commits in current buffer' })
+vim.keymap.set('v', '<leader>gc', builtin.git_bcommits_range, { desc = 'Git commits in selected lines' })
+vim.keymap.set('v', '<leader>gb', builtin.git_branches, { desc = 'Git branches' })
+vim.keymap.set('v', '<leader>gg', builtin.git_status, { desc = 'Git status' })
+vim.keymap.set('v', '<leader>gs', builtin.git_stash, { desc = 'Git stash' })
+
 -- Buffer-local fuzzy find
 vim.keymap.set('n', '<leader>/', function()
   builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {

@@ -15,4 +15,5 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Save
 vim.keymap.set({ 'n', 'i' }, '<C-s>', ':update<CR>', { desc = 'Save' })
+vim.keymap.set('n', '<leader>w', ':update<CR>', { desc = 'Save' })
 
