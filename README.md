@@ -5,11 +5,9 @@ Modular Neovim configuration built on `vim.pack`.
 ## Install
 
 ```sh
-git clone https://github.com/<your-username>/nvim-config.git ~/.config/nvim
+git clone https://github.com/j4ger/picovim.git ~/.config/nvim
 nvim
 ```
-
-`vim.pack` will install all plugins on first start.
 
 ## Structure
 
@@ -22,27 +20,10 @@ nvim
 │   │   ├── keymaps.lua       # global keymaps
 │   │   └── autocmds.lua      # yank highlight
 │   ├── plugins/
-│   │   ├── init.lua          # gh() helper, build hooks
-│   │   ├── ui.lua            # colorscheme, which-key, mini, todo, guess-indent
-│   │   ├── telescope.lua     # telescope + fzf + keymaps
-│   │   ├── lsp.lua           # fidget, mason, lsp servers
-│   │   ├── formatting.lua    # conform.nvim
-│   │   ├── completion.lua    # blink.cmp + luasnip
-│   │   ├── treesitter.lua    # nvim-treesitter
-│   │   ├── gitsigns.lua      # git signs + hunk keymaps
-│   │   ├── autopairs.lua
-│   │   ├── indent_line.lua
-│   │   ├── lint.lua
-│   │   └── yazi.lua          # file tree
+│   │   ├── init.lua          # gh() helper, build hooks, auto-loads *.lua in this dir
+│   │   └── ...               # other plugins
 │   └── custom/plugins/       # your own plugins
 │       └── init.lua          # auto-loads *.lua in this dir
-```
-
-## Manage plugins
-
-```vim
-:lua vim.pack.update(nil, { offline = true })  " inspect state
-:lua vim.pack.update()                          " fetch updates
 ```
 
 ## Requirements
