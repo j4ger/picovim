@@ -30,9 +30,9 @@ vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Search buffer
 vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = 'Git commits' })
 vim.keymap.set('n', '<leader>gC', builtin.git_bcommits, { desc = 'Git commits in current buffer' })
 vim.keymap.set('v', '<leader>gc', builtin.git_bcommits_range, { desc = 'Git commits in selected lines' })
-vim.keymap.set('v', '<leader>gb', builtin.git_branches, { desc = 'Git branches' })
-vim.keymap.set('v', '<leader>gg', builtin.git_status, { desc = 'Git status' })
-vim.keymap.set('v', '<leader>gs', builtin.git_stash, { desc = 'Git stash' })
+vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = 'Git branches' })
+vim.keymap.set('n', '<leader>gg', builtin.git_status, { desc = 'Git status' })
+vim.keymap.set('n', '<leader>gs', builtin.git_stash, { desc = 'Git stash' })
 
 -- Buffer-local fuzzy find
 vim.keymap.set('n', '<leader>/', function()
